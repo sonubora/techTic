@@ -1,0 +1,58 @@
+
+  <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>{{mainBlogCtrl.blogName}}</h1>
+              <span class="subheading">{{mainBlogCtrl.subBlogName}}</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+
+
+           <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#!/createNewBlog">Create a New Blog &uarr;</a>
+            
+          </div>
+
+
+   <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview myOwnCard " ng-repeat="blog in mainBlogCtrl.blogs">
+            <a ng-href="#!/singleBlog/{{blog.blogId}}">
+              <h2 class="post-title">
+               {{blog.heading }}
+              </h2>
+              <h4 class="post-subtitle">
+               {{blog.subHeading}}
+              </h4>
+            </a>
+            <p class="post-meta">Posted by
+              <a ng-href="#!/singleBlog/{{blog.blogId}}">{{blog.author}}</a>
+              on {{blog.created | date:format:timezone}}</p>
+              <button ng-click="mainBlogCtrl.deleteBlog(blog.blogId)">Delete ths Blog</button>
+              
+          </div>
+          
+          <hr>
+         
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+
+          </div>
+
+    <hr>

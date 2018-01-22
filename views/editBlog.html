@@ -1,0 +1,65 @@
+
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+            
+            <span class="subheading">Edit Your Blog Here  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+      <div class="container" >
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+               
+                <form  ng-submit="editCtrl.editSaveBlog()" " novalidate>
+                    
+                        <div class="form-group col-xs-12 ">
+                           
+                            <input type="text" class="form-control"  ng-value= "editCtrl.blog.heading"  ng-model="editCtrl.editHeading">
+                           
+                        </div>
+                    
+                    
+                        <div class="form-group col-xs-12 ">
+                           
+                            <input type="text" class="form-control"  ng-value= "editCtrl.blog.subHeading"  ng-model="editCtrl.editSubHeading">
+                           
+                        </div>
+                    
+                    
+                        <div class="form-group col-xs-12 ">
+                            
+                            <input type="text" class="form-control"  ng-value="editCtrl.blog.author"  ng-model="editCtrl.editAuthor">
+                            
+                        </div>
+                    
+                    
+                        <div class="form-group col-xs-12 ">
+                            
+                            <textarea rows="10" class="form-control"  ng-value="editCtrl.blog.bodyHtml" ng-model="editCtrl.editBodyHtml" ></textarea>
+                            
+                        </div>
+                    
+                    <br>
+                    
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-default">Edit and Save </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr> 
+       
+

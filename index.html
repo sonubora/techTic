@@ -1,0 +1,113 @@
+<!DOCTYPE html >
+<html lang="en" ng-app ="myBlogApp">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TechTic</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Custom styles for this template -->
+     <link href="css/clean-blog.min.css" rel="stylesheet">
+     <style type="text/css">
+       .myOwnCard {
+         border-bottom: 3px solid green;
+         padding: 8px;
+                
+        }
+
+
+     </style>
+
+  </head>
+
+  <body >
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#!/">TechTic</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#!/">Home</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  
+
+    <!-- Main Content -->
+    
+      <div ng-view>
+        
+
+       </div>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            
+            <p class="copyright text-muted"><b>Sonu Bora</b></p>
+            <p class="copyright text-muted">+919536336639</p>
+            <p class="copyright text-muted">sonubora111@gmail.com </p>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+             
+              <!-- Angular JS file -->
+
+          <script src="angular/angular.min.js"></script>
+          <script type="text/javascript" src="https://code.angularjs.org/1.6.7/angular-route.js"></script>
+
+
+          <!--*******************app.js file Here************************-->
+
+          <script src="angular/myApp.js"></script>
+          <script src="angular/service/apiCallService.js"></script>
+
+        
+        
+  <!--********************All Controllers Here************************-->
+          <script src="angular/controller/mainBlogController.js"></script>
+          <script src="angular/controller/singleBlog.js"></script>
+          <script src="angular/controller/editController.js"></script>
+          <script src="angular/controller/createNewBlogController.js"></script>
+
+   
+   <!--*****************Route.js here**********************-->
+         
+          <script src="angular/route.js"></script>
+
+
+ 
+
+  </body>
+</html>
