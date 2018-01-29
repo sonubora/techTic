@@ -1,0 +1,19 @@
+
+
+<div class="post-preview myOwnCard " >
+            <a ng-href="#!/singleBlog/{{blog.blogId}}">
+              <h2 class="post-title">
+               {{blog.heading }}
+              </h2>
+              <h4 class="post-subtitle">
+               {{blog.subHeading}}
+              </h4>
+            </a>
+            <p class="post-meta">Posted by
+              <a ng-href="#!/singleBlog/{{blog.blogId}}">{{blog.author}}</a>
+              on {{blog.created | date:format:timezone}}</p>
+              <button ng-click = "singleCtrl.deleteBlog(blog.blogId)">Delete this Blog</button>
+             
+              
+ </div>
+          

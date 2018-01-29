@@ -1,5 +1,5 @@
 
-myApp.controller('singleBlogController',['$http','$routeParams','$location','apiService',function($http,$routeParams,$location,apiService){
+myApp.controller('singleBlogController',['$http','$routeParams','$location','apiService','$sce',function($http,$routeParams,$location,apiService,$sce){
 
   var main=this;
  
@@ -14,6 +14,11 @@ console.log(response);
 
 main.blog=response.data.data;
 console.log(main.blog);
+
+
+main.bodyContent = $sce.trustAsHtml(main.blog.bodyHtml);
+
+
 
 },function errorCallback(response){
 
@@ -30,6 +35,7 @@ this.toEditPage =function(){
 $location.path('/editBlog/'+main.blogId);
 
 };
+
 
 
 

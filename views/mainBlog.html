@@ -25,22 +25,14 @@
 
    <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview myOwnCard " ng-repeat="blog in mainBlogCtrl.blogs">
-            <a ng-href="#!/singleBlog/{{blog.blogId}}">
-              <h2 class="post-title">
-               {{blog.heading }}
-              </h2>
-              <h4 class="post-subtitle">
-               {{blog.subHeading}}
-              </h4>
-            </a>
-            <p class="post-meta">Posted by
-              <a ng-href="#!/singleBlog/{{blog.blogId}}">{{blog.author}}</a>
-              on {{blog.created | date:format:timezone}}</p>
-              <button ng-click="mainBlogCtrl.deleteBlog(blog.blogId)">Delete ths Blog</button>
-              
+        <div class="col-lg-8 col-md-10 mx-auto"  >
+
+          <div ng-repeat=" blog in mainBlogCtrl.blogs">
+            <blog-directive blog-info="blog"> </blog-directive>
+
           </div>
+           
+          
           
           <hr>
          
